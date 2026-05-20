@@ -1,95 +1,106 @@
-/* SLIDES */
-
 .slides-section{
-padding:120px 8%;
+padding:140px 7%;
 background:#0b0b0b;
 }
+
+/* EACH SLIDE */
 
 .slide{
 display:flex;
 align-items:center;
 justify-content:space-between;
-gap:90px;
-margin-bottom:140px;
+gap:100px;
+margin-bottom:180px;
 min-height:100vh;
+position:relative;
 }
 
-.slide-content{
-flex:1;
-max-width:700px;
-}
-
-.slide-content h2{
-font-family:'Cinzel',serif;
-font-size:72px;
-line-height:1.2;
-margin-bottom:25px;
-color:#f3d27a;
-}
-
-.slide-content h3{
-font-size:18px;
-letter-spacing:5px;
-text-transform:uppercase;
-color:#ff5f5f;
-margin-bottom:30px;
-}
-
-.slide-content p{
-font-size:24px;
-line-height:2;
-margin-bottom:30px;
-color:#bdbdbd;
-font-weight:300;
-}
+/* IMAGE LEFT SIDE */
 
 .slide-image{
 flex:1;
-display:flex;
-justify-content:flex-end;
 position:relative;
+display:flex;
+justify-content:flex-start;
 }
 
 .slide-image img{
 width:100%;
 max-width:700px;
-height:850px;
+height:820px;
 object-fit:cover;
-border-radius:4px;
 position:relative;
 z-index:2;
+transition:0.5s;
 }
 
-/* BORDER EFFECT */
+/* OUTSIDE BORDER EFFECT */
 
 .slide-image::after{
 content:'';
 position:absolute;
-top:30px;
-right:-20px;
+top:25px;
+left:25px;
 width:100%;
 max-width:700px;
-height:850px;
-border:1px solid rgba(255,255,255,0.15);
+height:820px;
+border:1px solid rgba(255,255,255,0.12);
 z-index:1;
 }
 
-/* MOBILE */
+/* HOVER EFFECT */
+
+.slide:hover .slide-image img{
+transform:scale(1.02);
+}
+
+/* TEXT RIGHT SIDE */
+
+.slide-content{
+flex:1;
+max-width:720px;
+}
+
+/* SMALL TITLE */
+
+.slide-content h3{
+font-size:16px;
+letter-spacing:5px;
+text-transform:uppercase;
+color:#ff5c5c;
+margin-bottom:25px;
+font-weight:600;
+}
+
+/* MAIN TITLE */
+
+.slide-content h2{
+font-family:'Cinzel',serif;
+font-size:74px;
+line-height:1.15;
+margin-bottom:35px;
+color:#f5d27b;
+font-weight:700;
+}
+
+/* PARAGRAPH */
+
+.slide-content p{
+font-size:24px;
+line-height:2;
+color:#bdbdbd;
+margin-bottom:35px;
+font-weight:300;
+}
+
+/* MOBILE RESPONSIVE */
 
 @media(max-width:1000px){
 
 .slide{
-flex-direction:column-reverse;
-gap:40px;
+flex-direction:column;
+gap:50px;
 min-height:auto;
-}
-
-.slide-content h2{
-font-size:42px;
-}
-
-.slide-content p{
-font-size:18px;
 }
 
 .slide-image img{
@@ -98,6 +109,15 @@ height:450px;
 
 .slide-image::after{
 display:none;
+}
+
+.slide-content h2{
+font-size:42px;
+}
+
+.slide-content p{
+font-size:18px;
+line-height:1.8;
 }
 
 }
