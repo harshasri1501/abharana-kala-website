@@ -1,9 +1,164 @@
-.slides-section{
-padding:140px 7%;
-background:#0b0b0b;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
 }
 
-/* EACH SLIDE */
+body{
+background:#050505;
+color:white;
+font-family:'Poppins',sans-serif;
+overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+header{
+position:fixed;
+top:0;
+width:100%;
+z-index:1000;
+background:rgba(0,0,0,0.92);
+backdrop-filter:blur(12px);
+border-bottom:1px solid rgba(255,215,0,0.15);
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:25px 7%;
+}
+
+nav h1{
+font-family:'Cinzel',serif;
+font-size:48px;
+color:#f5d27b;
+letter-spacing:2px;
+}
+
+nav ul{
+display:flex;
+gap:40px;
+list-style:none;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+font-size:18px;
+transition:0.3s;
+font-weight:500;
+}
+
+nav ul li a:hover{
+color:#f5d27b;
+}
+
+/* HERO SECTION */
+
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.82)),
+url('yojanam.jpg');
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:0 10%;
+}
+
+.hero-content{
+max-width:1100px;
+}
+
+.hero-content h1{
+font-family:'Cinzel',serif;
+font-size:90px;
+color:#f5d27b;
+margin-bottom:25px;
+letter-spacing:3px;
+}
+
+.hero-content h2{
+font-size:38px;
+margin-bottom:30px;
+font-weight:500;
+}
+
+.hero-content p{
+font-size:24px;
+line-height:2;
+color:#ddd;
+}
+
+/* TEAM */
+
+.team-section{
+padding:140px 8%;
+background:#0d0d0d;
+text-align:center;
+}
+
+.team-section h2{
+font-family:'Cinzel',serif;
+font-size:65px;
+color:#f5d27b;
+margin-bottom:60px;
+}
+
+.team-card{
+max-width:800px;
+margin:auto;
+background:#121212;
+padding:60px;
+border-radius:25px;
+border:1px solid rgba(255,215,0,0.15);
+box-shadow:0 0 40px rgba(255,215,0,0.08);
+}
+
+.team-card p{
+font-size:24px;
+margin-bottom:25px;
+line-height:2;
+}
+
+/* ABOUT */
+
+.about-section{
+padding:140px 10%;
+background:#080808;
+text-align:center;
+}
+
+.about-section h2{
+font-family:'Cinzel',serif;
+font-size:68px;
+color:#f5d27b;
+margin-bottom:50px;
+}
+
+.about-section p{
+font-size:23px;
+line-height:2.1;
+max-width:1200px;
+margin:auto;
+margin-bottom:30px;
+color:#d0d0d0;
+}
+
+/* SLIDES */
+
+.slides-section{
+padding:140px 7%;
+background:#050505;
+}
+
+/* SINGLE SLIDE */
 
 .slide{
 display:flex;
@@ -12,29 +167,26 @@ justify-content:space-between;
 gap:100px;
 margin-bottom:180px;
 min-height:100vh;
-position:relative;
 }
 
-/* IMAGE LEFT SIDE */
+/* IMAGE LEFT */
 
 .slide-image{
 flex:1;
 position:relative;
-display:flex;
-justify-content:flex-start;
 }
 
 .slide-image img{
 width:100%;
 max-width:700px;
-height:820px;
+height:850px;
 object-fit:cover;
+display:block;
 position:relative;
 z-index:2;
-transition:0.5s;
 }
 
-/* OUTSIDE BORDER EFFECT */
+/* BORDER EFFECT */
 
 .slide-image::after{
 content:'';
@@ -43,59 +195,91 @@ top:25px;
 left:25px;
 width:100%;
 max-width:700px;
-height:820px;
+height:850px;
 border:1px solid rgba(255,255,255,0.12);
 z-index:1;
 }
 
-/* HOVER EFFECT */
-
-.slide:hover .slide-image img{
-transform:scale(1.02);
-}
-
-/* TEXT RIGHT SIDE */
+/* TEXT RIGHT */
 
 .slide-content{
 flex:1;
 max-width:720px;
 }
 
-/* SMALL TITLE */
+/* SMALL HEADING */
 
 .slide-content h3{
 font-size:16px;
 letter-spacing:5px;
 text-transform:uppercase;
-color:#ff5c5c;
-margin-bottom:25px;
-font-weight:600;
+color:#ff5e5e;
+margin-bottom:30px;
 }
 
-/* MAIN TITLE */
+/* BIG TITLE */
 
 .slide-content h2{
 font-family:'Cinzel',serif;
-font-size:74px;
+font-size:72px;
 line-height:1.15;
 margin-bottom:35px;
 color:#f5d27b;
-font-weight:700;
 }
 
 /* PARAGRAPH */
 
 .slide-content p{
-font-size:24px;
+font-size:23px;
 line-height:2;
-color:#bdbdbd;
 margin-bottom:35px;
+color:#c8c8c8;
 font-weight:300;
 }
 
-/* MOBILE RESPONSIVE */
+/* FOOTER */
+
+footer{
+padding:70px;
+background:black;
+text-align:center;
+border-top:1px solid rgba(255,215,0,0.12);
+}
+
+footer h2{
+font-family:'Cinzel',serif;
+font-size:42px;
+color:#f5d27b;
+margin-bottom:20px;
+}
+
+footer p{
+font-size:18px;
+color:#bbb;
+}
+
+/* MOBILE */
 
 @media(max-width:1000px){
+
+nav{
+flex-direction:column;
+gap:20px;
+}
+
+nav ul{
+flex-wrap:wrap;
+justify-content:center;
+gap:20px;
+}
+
+.hero-content h1{
+font-size:55px;
+}
+
+.hero-content h2{
+font-size:28px;
+}
 
 .slide{
 flex-direction:column;
