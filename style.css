@@ -10,12 +10,39 @@
 /* BODY */
 
 body{
-    background:
-    linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.92)),
-    radial-gradient(circle at top, #3b220d 0%, #120c07 40%, #000000 100%);
-    
-    color:white;
+
     font-family:'Poppins', sans-serif;
+    color:white;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.88),
+        rgba(0,0,0,0.92)
+    ),
+
+    radial-gradient(
+        circle at top left,
+        rgba(120,70,20,0.35),
+        transparent 40%
+    ),
+
+    radial-gradient(
+        circle at bottom right,
+        rgba(255,170,70,0.18),
+        transparent 35%
+    ),
+
+    linear-gradient(
+        135deg,
+        #000000 0%,
+        #140b05 25%,
+        #241205 50%,
+        #0d0602 75%,
+        #000000 100%
+    );
+
+    background-attachment:fixed;
+
     overflow-x:hidden;
 }
 
@@ -42,7 +69,6 @@ nav h1{
     font-family:'Cinzel', serif;
     font-size:2.5rem;
     color:#f3d17c;
-    letter-spacing:2px;
 }
 
 nav ul{
@@ -54,7 +80,6 @@ nav ul{
 nav ul li a{
     text-decoration:none;
     color:white;
-    font-size:1rem;
     transition:0.3s;
 }
 
@@ -62,7 +87,7 @@ nav ul li a:hover{
     color:#f3d17c;
 }
 
-/* HERO SECTION */
+/* HERO */
 
 .hero{
     min-height:100vh;
@@ -70,12 +95,13 @@ nav ul li a:hover{
     display:flex;
     justify-content:center;
     align-items:center;
+
     text-align:center;
 
-    padding:120px 40px;
+    padding:120px 20px;
 
     background:
-    linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)),
+    linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.9)),
     url('yojanam.jpg');
 
     background-size:cover;
@@ -87,14 +113,15 @@ nav ul li a:hover{
     max-width:950px;
 
     background:rgba(30,15,5,0.55);
+
     padding:60px;
+
     border-radius:25px;
 
     border:1px solid rgba(255,215,120,0.4);
 
     box-shadow:
-    0 0 40px rgba(255,180,80,0.2),
-    0 0 80px rgba(255,120,0,0.15);
+    0 0 40px rgba(255,180,80,0.2);
 
     backdrop-filter:blur(6px);
 }
@@ -109,16 +136,14 @@ nav ul li a:hover{
 .hero-content h2{
     font-size:2.2rem;
     margin-bottom:25px;
-    color:white;
 }
 
 .hero-content p{
-    font-size:1.15rem;
     line-height:2;
-    color:#f2f2f2;
+    font-size:1.1rem;
 }
 
-/* TEAM SECTION */
+/* TEAM */
 
 .team-section{
     padding:120px 20px;
@@ -128,8 +153,8 @@ nav ul li a:hover{
 .team-section h2{
     font-size:3rem;
     margin-bottom:50px;
-    font-family:'Cinzel', serif;
     color:#f3d17c;
+    font-family:'Cinzel', serif;
 }
 
 .team-card{
@@ -139,24 +164,21 @@ nav ul li a:hover{
     background:linear-gradient(145deg,#3c1e0c,#1a0d05);
 
     padding:50px;
+
     border-radius:25px;
 
     border:2px solid rgba(255,215,120,0.4);
 
     box-shadow:
     0 0 30px rgba(255,180,70,0.25);
-
-    backdrop-filter:blur(5px);
 }
 
 .team-card p{
     margin:20px 0;
-    font-size:1.3rem;
-    font-weight:500;
-    color:white;
+    font-size:1.2rem;
 }
 
-/* ABOUT SECTION */
+/* ABOUT */
 
 .about-section{
     padding:120px 12%;
@@ -171,10 +193,9 @@ nav ul li a:hover{
 }
 
 .about-section p{
-    font-size:1.15rem;
-    line-height:2.1;
-    color:#e6e6e6;
-    margin-bottom:25px;
+    line-height:2;
+    margin-bottom:20px;
+    color:#dddddd;
 }
 
 /* SLIDES */
@@ -186,18 +207,19 @@ nav ul li a:hover{
 /* EACH SLIDE */
 
 .slide{
+
     display:flex;
     align-items:center;
-    justify-content:space-between;
-
     gap:80px;
 
     margin-bottom:140px;
 
     background:
-    linear-gradient(145deg,
-    rgba(40,20,8,0.8),
-    rgba(10,10,10,0.95));
+    linear-gradient(
+        145deg,
+        rgba(40,20,8,0.8),
+        rgba(10,10,10,0.95)
+    );
 
     padding:60px;
 
@@ -207,14 +229,12 @@ nav ul li a:hover{
 
     box-shadow:
     0 0 50px rgba(255,180,70,0.08);
-
-    transition:0.5s;
 }
 
-.slide:hover{
-    transform:translateY(-8px);
-    box-shadow:
-    0 0 70px rgba(255,180,70,0.15);
+/* REVERSE */
+
+.reverse{
+    flex-direction:row-reverse;
 }
 
 /* IMAGE */
@@ -233,7 +253,7 @@ nav ul li a:hover{
     0 0 30px rgba(255,180,70,0.15);
 }
 
-/* TEXT */
+/* CONTENT */
 
 .slide-content{
     flex:1;
@@ -243,11 +263,10 @@ nav ul li a:hover{
     color:#ff9248;
     letter-spacing:4px;
     margin-bottom:20px;
-    font-size:1rem;
 }
 
 .slide-content h2{
-    font-size:3.3rem;
+    font-size:3rem;
     margin-bottom:30px;
 
     color:#f3d17c;
@@ -256,10 +275,9 @@ nav ul li a:hover{
 }
 
 .slide-content p{
-    color:#dddddd;
     line-height:2;
-    font-size:1.1rem;
     margin-bottom:20px;
+    color:#dddddd;
 }
 
 /* FOOTER */
@@ -267,9 +285,7 @@ nav ul li a:hover{
 footer{
     text-align:center;
     padding:50px 20px;
-
     background:#050505;
-
     border-top:1px solid rgba(255,215,120,0.2);
 }
 
@@ -277,7 +293,6 @@ footer h2{
     font-family:'Cinzel', serif;
     color:#f3d17c;
     margin-bottom:15px;
-    font-size:2rem;
 }
 
 footer p{
@@ -296,7 +311,6 @@ footer p{
     nav ul{
         gap:20px;
         flex-wrap:wrap;
-        justify-content:center;
     }
 
     .hero-content h1{
@@ -307,11 +321,13 @@ footer p{
         font-size:1.5rem;
     }
 
-    .slide{
+    .slide,
+    .reverse{
         flex-direction:column;
     }
 
     .slide-content h2{
-        font-size:2.3rem;
+        font-size:2rem;
     }
+
 }
